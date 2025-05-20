@@ -1,3 +1,56 @@
+document.addEventListener("DOMContentLoaded", function () {
+  let currentIndex = 0;
+  const slides = document.querySelectorAll(".bidang-slide");
+  const dots = document.querySelectorAll(".dot");
+  const prevBtn = document.getElementById("prev");
+  const nextBtn = document.getElementById("next");
+
+  function showSlide(index) {
+    slides.forEach((slide, i) => {
+      if (i === index) {
+        slide.style.opacity = "0";
+        slide.style.transform = "translateY(20px)"; // Efek geser ke bawah
+        setTimeout(() => {
+          slides.forEach((s) => s.classList.remove("active")); // Hapus active di semua
+          slide.classList.add("active");
+          slide.style.opacity = "1";
+          slide.style.transform = "translateY(0)";
+        }, 200); // Delay agar tidak langsung muncul
+      } else {
+        slide.style.opacity = "0";
+        slide.style.transform = "translateY(-20px)"; // Efek geser ke atas saat pindah
+      }
+    });
+
+    dots.forEach((dot, i) => {
+      dot.classList.toggle("active", i === index);
+    });
+  }
+
+  prevBtn.addEventListener("click", function () {
+    if (currentIndex > 0) {
+      currentIndex--;
+      showSlide(currentIndex);
+    }
+  });
+
+  nextBtn.addEventListener("click", function () {
+    if (currentIndex < slides.length - 1) {
+      currentIndex++;
+      showSlide(currentIndex);
+    }
+  });
+
+  dots.forEach((dot, i) => {
+    dot.addEventListener("click", function () {
+      currentIndex = i;
+      showSlide(currentIndex);
+    });
+  });
+
+  // Tampilkan slide pertama saat halaman dimuat
+  showSlide(currentIndex);
+});
 // Paralax Effect
 let glowCloud = document.getElementById("glow-left-cloud");
 let leftCloud = document.getElementById("left-cloud");
@@ -150,7 +203,7 @@ window.addEventListener("scroll", () => {
         });
         activated = false;
     }
-})
+});
 // NUMBER COUNTING ANIMATION
 
 //  FAQ SECTION - ACCORDION

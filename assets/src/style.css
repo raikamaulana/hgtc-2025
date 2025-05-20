@@ -1,0 +1,173 @@
+/* start golden-age mainsection */
+.goldenage-section {
+    width: 100%;
+    height: 1300px;
+    background-image: url("../images/gambar/masjidbackground.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat; 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.text-goldenage .text-edited {
+    font-style: italic;
+    color: rgb(240, 140, 18);
+}
+.goldenage-section h2 {
+    margin-top: -250px;
+    margin-bottom: 30px;
+    color: #F5EFE7;
+    font-family: Plus Jakarta Sans;
+    text-align: center;
+    font-size: 4rem;
+    font-weight: bold;
+}
+
+.goldenage-section .explain-goldenage {
+    text-indent: 2em;
+    text-align: justify;
+    font-size: 1.5rem;
+    margin: auto;
+    width: 80%;
+    color: #F5EFE7;
+    font-family: Plus Jakarta Sans;
+    line-height: 2em;
+}
+/* end golden-age mainsection */
+
+/*==================== BIDANG SECTION ====================*/
+.bidang-section {
+    position: relative;
+    width: 100%;
+    height: 1150px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    overflow: hidden;
+    background: 
+        url("../image/bidang-section/background.png"),
+        linear-gradient(180deg, #376570, #369eb1);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.bidang-container {
+    position: relative;
+    width: 100%;
+    max-width: 1180px;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    padding: 2rem;
+    transition: opacity 0.5s, transform 0.5s;
+}
+.bidang-slide{
+    display: none;
+    align-items: center;
+    opacity: 0;
+    transform: translateY(10px);
+    transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
+}
+
+.bidang-slide.active {
+    display: flex;
+    flex-direction: column;
+    opacity: 1;
+    transform: translateY(0);
+    position: relative;
+}
+.bidang-slide.active .bintang-besar {
+    position: absolute;
+    top: 0;
+    left: 20%;
+}
+.bidang-slide.active .bintang-kecil {
+    position: absolute;
+    top: 20%;
+    left: 79%;
+}
+
+.bidang-slide h2 {
+    font-size: clamp(5.5rem, 8.64086vw, 6rem);
+    flex-wrap: nowrap;
+    font-weight: bold;
+    letter-spacing: -4px;
+    background: linear-gradient(90deg, #FFB8CF, #93E5FB);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.bidang-slide p {
+    max-width: 750px;
+    font-size: clamp(1rem, 2vw, 1.25rem);
+    color: #FFFFFF;
+    margin-top: 1rem;
+    margin-bottom: 2.5rem;
+}
+.left {
+    max-width: 800px;
+    text-align: left;
+    align-items: normal;
+}
+.left p {
+    max-width: 905px;
+}
+/* Navigasi */
+.bidang-nav {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+.bidang-nav button {
+    background: #D2B2FF;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    border: 4px solid #D2B2FF;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    font-size: 1.2rem;
+    font-weight: 700;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.bidang-nav button:hover {
+    background: #D2B2FF;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.bidang-dots {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.dot {
+    width: 8px;
+    height: 8px;
+    background: linear-gradient(90deg, #FFB8CF, #93E5FB);
+    border-radius: 50%;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.dot.active {
+    transform: scale(1.4);
+    background: linear-gradient(90deg, #FFB8CF, #93E5FB);
+}
