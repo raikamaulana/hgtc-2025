@@ -1,0 +1,570 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HGTC 2025 ー HIMTIKA ー Himpunan Mahasiswa Informatika</title>
+
+    <!-- ICON -->
+    <link rel="icon" href="assets/images/icons/footer.png"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"/>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="./assets/src/output.css">
+    <link rel="stylesheet" href="./assets/src/style.css">
+
+</head>
+<body>
+    <!-- Navbar Start-->
+    <nav id="navbar" class="w-full absolute top-0 left-0 px-6 py-5 text-white z-25 transition-all duration-500 sm:px-16 lg:px-18 lg:py-5 font-jakarta">
+        <div class="flex justify-between items-center selection:bg-white selection:text-purple">
+            <a href="#home" class="font-semibold text-2xl md:text-3xl lg:text-4xl transition-all duration-500 flex items-center gap-6 md:gap-9">
+                <span class="w-[59px] h-[59px] bg-gradient-to-b from-blueLogo to-purpleLogo rounded-full flex items-center custom-shadow">
+                    <img src="assets/images/icons/mirip-react.svg" alt="img" width="59" height="59" class="atom-spin" />
+                </span>
+                <span class="bg-gradient-to-r from-blueTextLogo to-purpleTextLogo bg-clip-text text-transparent font-extrabold text-3xl text-logo-shadow inner-text">HGTC</span>
+            </a>
+            <div>
+                <!-- ICON BAR -->
+                <button class="nav-icon block lg:hidden" id="hamburger" type="button">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+                <!-- ICON BAR -->
+    
+                <div 
+                    class="hidden absolute top-[98px] right-0 left-0 py-3 bg-white bg-opacity-90 shadow-lg z-20 lg:block lg:static lg:max-w-full lg:bg-transparent lg:shadow-none" 
+                    id="nav-menu">
+                    <ul class="block lg:flex lg:gap-[70px] font-jakarta text-center">
+                        <li>
+                            <a href="#about" class="w-full py-1 lg:py-0 lg:w-auto text-center group block cursor-pointer transition duration-300">
+                                <span class="inline-block font-[Plus Jakarta Sans] py-1 lg:py-0 font-medium text-xl lg:text-white
+                                            bg-gradient-to-b from-[#2A049C] to-[#5F29FF] 
+                                            bg-clip-text text-transparent border-b-2 border-transparent 
+                                            group-hover:border-b-red-500/70 
+                                            group-hover:bg-gradient-to-b 
+                                            group-hover:from-black/70 group-hover:to-red-500 transition duration-300">
+                                Home
+                                </span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#about" class="w-full py-1 lg:py-0 lg:w-auto text-center group block cursor-pointer transition duration-300">
+                                <span class="inline-block font-[Plus Jakarta Sans] py-1 lg:py-0 font-medium text-xl lg:text-white
+                                            bg-gradient-to-b from-[#2A049C] to-[#5F29FF] 
+                                            bg-clip-text text-transparent border-b-2 border-transparent 
+                                            group-hover:border-b-red-500/70 
+                                            group-hover:bg-gradient-to-b 
+                                            group-hover:from-black/70 group-hover:to-red-500 transition duration-300">
+                                About
+                                </span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#about" class="w-full py-1 lg:py-0 lg:w-auto text-center group block cursor-pointer transition duration-300">
+                                <span class="inline-block font-[Plus Jakarta Sans] py-1 lg:py-0 font-medium text-xl lg:text-white
+                                            bg-gradient-to-b from-[#2A049C] to-[#5F29FF] 
+                                            bg-clip-text text-transparent border-b-2 border-transparent 
+                                            group-hover:border-b-red-500/70 
+                                            group-hover:bg-gradient-to-b 
+                                            group-hover:from-black/70 group-hover:to-red-500 transition duration-300">
+                                Documentation
+                                </span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#about" class="w-full py-1 lg:py-0 lg:w-auto text-center group block cursor-pointer transition duration-300">
+                                <span class="inline-block font-[Plus Jakarta Sans] py-1 lg:py-0 font-medium text-xl lg:text-white
+                                            bg-gradient-to-b from-[#2A049C] to-[#5F29FF] 
+                                            bg-clip-text text-transparent border-b-2 border-transparent 
+                                            group-hover:border-b-red-500/70 
+                                            group-hover:bg-gradient-to-b 
+                                            group-hover:from-black/70 group-hover:to-red-500 transition duration-300">
+                                FaQ
+                                </span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <!-- Navbar End-->
+        
+    <!-- START HERO SECTION -->
+    <section id="landing-page" class="text-center h-full w-full pt-32 bg-linear-45/oklch from-purpleHero to-darkPurple relative transition-all duration-500">
+        <div class="flex justify-center items-center">
+            <div class="absolute top-20 left-40 w-[1px] h-[1px] rounded-full bg-transparent shadow-purple-glow"></div>
+            <!-- bintang kiri -->
+            <img id="left-stars" data-base-top="128" class="absolute top-32 left-36 z-0" src="assets/images/icons/Stars.svg" alt="bintang">
+            <!-- bintang kanan -->
+            <div id="right-stars" data-base-top="400"  class="absolute top-100 right-42 z-3">
+                <img src="assets/images/icons/Stars.svg" alt="bintang">
+            </div>
+            <div class="">
+                <h1 class="relative font-jakarta font-bold text-8xl pt-14 bg-gradient-to-r from-blueTextLogo to-purpleTextLogo pb-5 bg-clip-text text-transparent md:max-w-[750px] text-center text-logo-shadow z-3">HIMTIKA Goes To Company</h1>
+                <button class="button flex items-center gap-2 px-6 py-3 border-none origin-center relative cursor-pointer mt-12 bg-[#9747FF] mx-auto z-5">
+                    <div class="dots_border"></div>
+                    <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        fill="none"
+                        viewBox="0 0 24 24"
+                        class="sparkle"
+                    >
+                        <path
+                        class="path"
+                        stroke-linejoin="round"
+                        stroke-linecap="round"
+                        stroke="black"
+                        fill="black"
+                        d="M14.187 8.096L15 5.25L15.813 8.096C16.0231 8.83114 16.4171 9.50062 16.9577 10.0413C17.4984 10.5819 18.1679 10.9759 18.903 11.186L21.75 12L18.904 12.813C18.1689 13.0231 17.4994 13.4171 16.9587 13.9577C16.4181 14.4984 16.0241 15.1679 15.814 15.903L15 18.75L14.187 15.904C13.9769 15.1689 13.5829 14.4994 13.0423 13.9587C12.5016 13.4181 11.8321 13.0241 11.097 12.814L8.25 12L11.096 11.187C11.8311 10.9769 12.5006 10.5829 13.0413 10.0423C13.5819 9.50162 13.9759 8.83214 14.186 8.097L14.187 8.096Z"
+                        ></path>
+                        <path
+                        class="path"
+                        stroke-linejoin="round"
+                        stroke-linecap="round"
+                        stroke="black"
+                        fill="black"
+                        d="M6 14.25L5.741 15.285C5.59267 15.8785 5.28579 16.4206 4.85319 16.8532C4.42059 17.2858 3.87853 17.5927 3.285 17.741L2.25 18L3.285 18.259C3.87853 18.4073 4.42059 18.7142 4.85319 19.1468C5.28579 19.5794 5.59267 20.1215 5.741 20.715L6 21.75L6.259 20.715C6.40725 20.1216 6.71398 19.5796 7.14639 19.147C7.5788 18.7144 8.12065 18.4075 8.714 18.259L9.75 18L8.714 17.741C8.12065 17.5925 7.5788 17.2856 7.14639 16.853C6.71398 16.4204 6.40725 15.8784 6.259 15.285L6 14.25Z"
+                        ></path>
+                        <path
+                        class="path"
+                        stroke-linejoin="round"
+                        stroke-linecap="round"
+                        stroke="black"
+                        fill="black"
+                        d="M6.5 4L6.303 4.5915C6.24777 4.75718 6.15472 4.90774 6.03123 5.03123C5.90774 5.15472 5.75718 5.24777 5.5915 5.303L5 5.5L5.5915 5.697C5.75718 5.75223 5.90774 5.84528 6.03123 5.96877C6.15472 6.09226 6.24777 6.24282 6.303 6.4085L6.5 7L6.697 6.4085C6.75223 6.24282 6.84528 6.09226 6.96877 5.96877C7.09226 5.84528 7.24282 5.75223 7.4085 5.697L8 5.5L7.4085 5.303C7.24282 5.24777 7.09226 5.15472 6.96877 5.03123C6.84528 4.90774 6.75223 4.75718 6.697 4.5915L6.5 4Z"
+                        ></path>
+                    </svg>
+                    <span class="text_button">Get Started</span>
+                </button>
+            </div>
+        </div>
+        <!-- bagian gedung dan awan -->
+        <div class="-mt-32 w-full relative">
+            <!-- Awan Kiri -->
+            <div id="left-cloud" class="absolute top-12 left-5 z-2">
+                <img src="assets/images/objects/left-cloud.png" alt="left-cloud">
+            </div>
+            <div id="glow-left-cloud" class="absolute top-70 left-120 w-[1px] h-[1px] rounded-full bg-transparent shadow-glow-cloud z-1"></div>
+            <!-- Awan Kanan -->
+            <div id="right-cloud" class="absolute -top-20 right-0 z-2">
+                <img src="assets/images/objects/right-cloud.png" class="w-full shadow-cloud" alt="right-cloud">
+            </div>
+            <div id="brin-building" class="relative z-4">
+                <img src="assets/images/objects/brin.png" class="w-full" alt="Illustration">
+            </div>
+        </div>
+    </section>  
+    <!-- END HERO SECTION -->
+
+    <!-- START LIVE SECTION -->
+    <div class="live-hero">
+        <div class="live flex items-center px-[70px] shrink-0">
+            <img src="assets/images/logo/kabinet-sinergis.png" alt="sinergis" />
+            <span class="text-white font-semibold italic text-[16px]">Sinergis</span>
+        </div>
+        <div class="live flex items-center px-[70px] shrink-0">
+            <img src="assets/images/logo/kabinet-sinergis.png" alt="sinergis" />
+            <span class="text-white font-semibold italic text-[16px]">Sinergis</span>
+        </div>
+        <div class="live flex items-center px-[70px] shrink-0">
+            <img src="assets/images/logo/kabinet-sinergis.png" alt="sinergis" />
+            <span class="text-white font-semibold italic text-[16px]">Sinergis</span>
+        </div>
+        <div class="live flex items-center px-[70px] shrink-0">
+            <img src="assets/images/logo/kabinet-sinergis.png" alt="sinergis" />
+            <span class="text-white font-semibold italic text-[16px]">Sinergis</span>
+        </div>
+        <div class="live flex items-center px-[70px] shrink-0">
+            <img src="assets/images/logo/kabinet-sinergis.png" alt="sinergis" />
+            <span class="text-white font-semibold italic text-[16px]">Sinergis</span>
+        </div>
+        <div class="live flex items-center px-[70px] shrink-0">
+            <img src="assets/images/logo/kabinet-sinergis.png" alt="sinergis" />
+            <span class="text-white font-semibold italic text-[16px]">Sinergis</span>
+        </div>
+    </div>
+    <!-- END LIVE SECTION -->
+
+    <!-- START ABOUT  -->
+    <section id="about" class="sm:px-16 lg:px-18 lg:py-60 bg-linear-90/oklch from-darkPurple to-purpleAbout relative transition-all duration-500">
+        <div class="flex items-center justify-center">
+            <img src="assets/images/objects/blob-left.svg" alt="img" class="absolute top-10 left-0" />
+            <div class="font-jakarta text-center w-5/6">
+                <h1 class="text-[80px] font-bold bg-linear-180/oklch from-blueLogo to-purpleTextLogo bg-clip-text text-transparent glow-purple">Apa itu HGTC?</h1>
+                <p class="text-3xl font-normal text-white text-justify mt-13">Merupakan kegiatan akademis yang diorganisir oleh HIMTIKA. Kegiatan ini melibatkan kunjungan mahasiswa ke perusahaan dengan tujuan meningkatkan pemahaman mendalam tentang dunia kerja. HGTC menjadi sarana pembelajaran yang efektif, memberikan kesempatan bagi mahasiswa untuk terlibat langsung dalam pengalaman dunia nyata!</p>
+            </div>
+            <img src="assets/images/objects/blob-right.svg" alt="img" class="absolute -bottom-8 right-0 z-1" />
+        </div>
+    </section>
+
+    <section class="pt-12 lg:pt-40 pb-24 px-6 sm:px-16 md:px-12 lg:px-18 transition-all duration-500 selection:bg-purple selection:text-white bg-linear-90/oklch from-darkPurple to-purpleAbout relative">
+        <div class="flex flex-col lg:flex-row w-full lg:gap-5 xl:gap-0">
+            <div class="w-full lg:w-7/12 flex flex-col lg:flex-row items-center font-jakarta">
+                <div>
+                    <h1 class="w-full font-bold text-6xl md:text-[64px] bg-linear-180/oklch from-blueLogo to-purpleTextLogo bg-clip-text text-transparent text-center -mb-8 lg:mb-0 lg:text-left transition-all duration-500 leading-15 glow-purple">
+                        Expanding <br />Knowledge, Shaping The Future.
+                    </h1>
+                    <h2 class="text-5xl mt-5 font-belanosima bg-linear-180/oklch from-blueLogo to-purpleTextLogo bg-clip-text text-transparent glow-purple">A Journey Into The Industry!</h2>
+                    <div class="w-full lg:w-5/12 flex items-start md:justify-start xl:justify-end transition-all duration-500 relative lg:hidden">    
+                        <img src="assets/images/objects/brin-docum.png" alt="illustrasion" class="" />
+                        <span class="absolute top-21 right-45 flex justify-center items-center custom-shadow">
+                            <span class="relative ">
+                                <!-- Gambar lingkaran biru sebagai latar -->
+                                <img src="assets/images/icons/blue-circle.svg" alt="blue-circle" class="absolute w-full h-full object-contain" />
+                                <!-- Gambar ikon atom di tengah -->
+                                <img src="assets/images/icons/atom-2.svg" alt="atom" class="atom-spin-2 z-10" />
+                                <img src="assets/images/icons/blured-star-1.png" alt="img" class="absolute -top-9 left-0" />
+                            </span>
+                        </span>
+                        <span class="absolute bottom-20 right-80 w-[59px] h-[59px] bg-gradient-to-b from-blueLogo to-purpleLogo rounded-full flex justify-center items-center custom-shadow">
+                            <div class="relative">
+                                <img src="assets/images/icons/mirip-react.svg" alt="img" width="59" height="59" class="atom-spin" />
+                                <img src="assets/images/icons/blured-star-2.png" alt="img" class="absolute -bottom-3 -left-3" />
+                            </div>
+                        </span>
+                    </div>
+                    <div class="bg-linear-90/oklch from-darkPurple to-darkPurpleAbout rounded-4xl glow-desc-div py-6 px-11 mt-10"> 
+                        <p class="font-light text-2xl text-center text-white leading-7 tracking-wide lg:text-justify">
+                        Setiap langkah dalam perjalanan ini tak hanya memperluas pengetahuan, tetapi juga turut membentuk masa depan yang lebih cemerlang!
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="w-full lg:w-5/12 lg:flex lg:items-start md:justify-start xl:justify-end transition-all duration-500 relative hidden">    
+                <img src="assets/images/objects/brin-docum.png" alt="illustrasion" class="" />
+                <span class="absolute top-21 right-45 flex justify-center items-center custom-shadow">
+                    <span class="relative w-[82px] h-[82px] flex justify-center items-center">
+                        <!-- Gambar lingkaran biru sebagai latar -->
+                        <img src="assets/images/icons/blue-circle.svg" alt="blue-circle" class="absolute w-full h-full object-contain" />
+                        <!-- Gambar ikon atom di tengah -->
+                        <img src="assets/images/icons/atom-2.svg" alt="atom" class="atom-spin-2 z-10" />
+                        <img src="assets/images/icons/blured-star-1.png" alt="img" class="absolute -top-9 left-0" />
+                    </span>
+                </span>
+                <span class="absolute bottom-20 right-80 w-[59px] h-[59px] bg-gradient-to-b from-blueLogo to-purpleLogo rounded-full flex justify-center items-center custom-shadow">
+                    <div class="relative">
+                        <img src="assets/images/icons/mirip-react.svg" alt="img" width="59" height="59" class="atom-spin" />
+                        <img src="assets/images/icons/blured-star-2.png" alt="img" class="absolute -bottom-3 -left-3" />
+                    </div>
+                </span>
+            </div>
+        </div>
+    </section>
+    <!-- END ABOUT  -->
+
+    <!-- START LIVE SECTION -->
+    <div class="live-hero">
+        <div class="live flex items-center px-[70px] shrink-0">
+            <img src="assets/images/logo/kabinet-sinergis.png" alt="sinergis" />
+            <span class="text-white font-semibold italic text-[16px]">Sinergis</span>
+        </div>
+        <div class="live flex items-center px-[70px] shrink-0">
+            <img src="assets/images/logo/kabinet-sinergis.png" alt="sinergis" />
+            <span class="text-white font-semibold italic text-[16px]">Sinergis</span>
+        </div>
+        <div class="live flex items-center px-[70px] shrink-0">
+            <img src="assets/images/logo/kabinet-sinergis.png" alt="sinergis" />
+            <span class="text-white font-semibold italic text-[16px]">Sinergis</span>
+        </div>
+        <div class="live flex items-center px-[70px] shrink-0">
+            <img src="assets/images/logo/kabinet-sinergis.png" alt="sinergis" />
+            <span class="text-white font-semibold italic text-[16px]">Sinergis</span>
+        </div>
+        <div class="live flex items-center px-[70px] shrink-0">
+            <img src="assets/images/logo/kabinet-sinergis.png" alt="sinergis" />
+            <span class="text-white font-semibold italic text-[16px]">Sinergis</span>
+        </div>
+        <div class="live flex items-center px-[70px] shrink-0">
+            <img src="assets/images/logo/kabinet-sinergis.png" alt="sinergis" />
+            <span class="text-white font-semibold italic text-[16px]">Sinergis</span>
+        </div>
+    </div>
+    <!-- END LIVE SECTION -->
+
+    <!-- START STATISTIK PERJALANAN SECTION -->
+    <section class="sm:px-16 lg:px-18 lg:pt-62 lg:pb-52 bg-linear-90/oklch from-darkPurple to-purpleAbout relative transition-all duration-500">
+        <div class="flex items-center justify-center">
+            <img src="assets/images/objects/blob-left-stat.svg" alt="img" class="absolute top-8 left-0" />
+            <div class="font-jakarta">
+                <h1 class="text-[64px] font-bold bg-linear-180/oklch from-blueLogo to-purpleTextLogo bg-clip-text text-transparent text-center glow-purple">Statistik Perjalanan HGTC</h1>
+                <div id="counters" class="grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 mt-11 text-center">
+                    <!-- Card 1: Jumlah Peserta -->
+                    <div id="card" class="bg-linear-180/oklch from-[#D9D9D9]/30 to-blueLogo/20 rounded-3xl lg:max-w-full font-jakarta p-4">
+                        <div class="h-[140px] flex justify-center items-center mx-auto">
+                            <img src="assets/images/icons/jumlah-peserta.svg" alt="img" />
+                        </div>
+                        <h1 class="text-white text-5xl font-bold mt-5 mb-2"><span data-count="60">0</span>+</h1>
+                        <p class="text-white text-xl">Jumlah Peserta Setiap Tahun</p>
+                    </div>
+                    <!-- Card 2: Feedback Survei -->
+                    <div id="card" class="bg-linear-180/oklch from-[#D9D9D9]/30 to-blueLogo/20 rounded-3xl lg:max-w-full font-jakarta p-4">
+                        <div class="h-[140px] flex justify-center items-end mx-auto">
+                            <img src="assets/images/icons/feedback.svg" alt="img" />
+                        </div>
+                        <h2 class="text-white text-5xl font-bold mt-5 mb-2"><span data-count="120">0</span>+</h2>
+                        <p class="text-white text-xl">Feedback Positif dari Survei</p>
+                    </div>
+                    <!-- Card 3: Peserta Puas -->
+                    <div id="card" class="bg-linear-180/oklch from-[#D9D9D9]/30 to-blueLogo/20 rounded-3xl lg:max-w-full font-jakarta p-4">
+                        <div class="h-[140px] flex justify-center items-center mx-auto">
+                            <img src="assets/images/icons/merasa-puas.svg" alt="img" />
+                        </div>
+                        <h2 class="text-white text-5xl font-bold mt-5 mb-2"><span data-count="90">0</span>%</h2>
+                        <p class="text-white text-xl">Peserta Merasa Puas</p>
+                    </div>
+                </div>
+                <div class="w-3/4 mx-auto">
+                    <p class="text-xl text-white text-center mt-13">Angka-angka ini bukan sekadar data—ini bukti nyata bahwa HGTC terus berkembang dan memberikan dampak positif bagi mahasiswa setiap tahunnya.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- END STATISTIK PERJALANAN SECTION -->
+
+    <!-- START PERUSAHAAN -->
+    <section class="sm:px-16 lg:px-18 lg:pb-80 bg-linear-90/oklch from-darkPurple to-purpleAbout relative transition-all duration-500">
+        <div class="flex items-center justify-center">
+            <div class="w-full font-jakarta flex flex-col gap-25">
+                <h1 class="text-6xl font-bold bg-linear-180/oklch from-blueLogo to-purpleTextLogo bg-clip-text text-transparent text-center leading-14 glow-purple pb-2.5">Perusahaan Yang Sudah <span class="block"> Kami Kunjungi</span></h1>
+                <div class="grid sm:grid-cols-1 md:grid-cols-2 gap-10 mx-auto lg:w-8/12">
+                    <!-- Card 1: Agate -->
+                    <div class="bg-white rounded-3xl lg:max-w-full font-jakarta py-5 px-4 hover:scale-105 transition-all duration-500 inner-purple-shadow">
+                        <a href="https://agate.id/" target="_blank">
+                            <div class="flex justify-center items-center mx-auto">
+                                <img src="assets/images/logo/agate.svg" alt="img" />
+                            </div>
+                        </a>
+                    </div>
+                    <!-- Card 2: BRIN -->
+                    <div class="bg-white rounded-3xl lg:max-w-full font-jakarta py-5 px-4 hover:scale-105 transition-all duration-500 inner-purple-shadow z-1">
+                        <a href="https://brin.go.id/orei/posts/kabar/peneliti-brin-teknologi-iot-kunci-untuk-mendukung-transformasi-digital" target="_blank">
+                            <div class="card-content flex justify-center items-center mx-auto">
+                                <img src="assets/images/logo/brin.svg" alt="img" />
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <img src="assets/images/objects/blob-right.svg" alt="img" class="absolute bottom-14 right-0" />
+    </section>
+    <!-- END PERUSAHAAN -->
+
+    <!-- START LIVE SECTION -->
+    <div class="live-hero">
+        <div class="live flex items-center px-[70px] shrink-0">
+            <img src="assets/images/logo/kabinet-sinergis.png" alt="sinergis" />
+            <span class="text-white font-semibold italic text-[16px]">Sinergis</span>
+        </div>
+        <div class="live flex items-center px-[70px] shrink-0">
+            <img src="assets/images/logo/kabinet-sinergis.png" alt="sinergis" />
+            <span class="text-white font-semibold italic text-[16px]">Sinergis</span>
+        </div>
+        <div class="live flex items-center px-[70px] shrink-0">
+            <img src="assets/images/logo/kabinet-sinergis.png" alt="sinergis" />
+            <span class="text-white font-semibold italic text-[16px]">Sinergis</span>
+        </div>
+        <div class="live flex items-center px-[70px] shrink-0">
+            <img src="assets/images/logo/kabinet-sinergis.png" alt="sinergis" />
+            <span class="text-white font-semibold italic text-[16px]">Sinergis</span>
+        </div>
+        <div class="live flex items-center px-[70px] shrink-0">
+            <img src="assets/images/logo/kabinet-sinergis.png" alt="sinergis" />
+            <span class="text-white font-semibold italic text-[16px]">Sinergis</span>
+        </div>
+        <div class="live flex items-center px-[70px] shrink-0">
+            <img src="assets/images/logo/kabinet-sinergis.png" alt="sinergis" />
+            <span class="text-white font-semibold italic text-[16px]">Sinergis</span>
+        </div>
+    </div>
+    <!-- END LIVE SECTION -->
+
+    <!-- START DOKUMENTASI -->
+    <section class="sm:px-16 lg:px-18 lg:py-56 bg-linear-90/oklch from-darkPurple to-purpleAbout relative transition-all duration-500">
+        <div class="flex items-center justify-center">
+            <div class="w-full font-jakarta">
+                <h1 class="text-8xl font-bold bg-linear-180/oklch from-blueLogo to-purpleLogo bg-clip-text text-transparent text-center pb-2.5 glow-purple">Dokumentasi</h1>
+                <div class="w-2/4 mx-auto mt-5">
+                    <p class="font-light leading-7 text-2xl text-white text-center">Dokumentasi ini menjadi bukti nyata partisipasi aktif mahasiswa dalam kegiatan kunjungan industri.</p>
+                </div>
+                <div class="slider">
+                    <div class="slide-track">
+                    <div class="slide"> <!<img src="" alt=""></div>
+                    <div class="slide"> <!<img src="" alt=""></div>
+                    <div class="slide"> <!<img src="" alt=""></div>
+                    <div class="slide"> <!<img src="" alt=""></div>
+                    <div class="slide"> <!<img src="" alt=""></div>
+                    <div class="slide"> <!<img src="" alt=""></div>
+                    <div class="slide"> <!<img src="" alt=""></div>
+                    <div class="slide"> <!<img src="" alt=""></div>
+                    <div class="slide"> <!<img src="" alt=""></div>
+                    <div class="slide"> <!<img src="" alt=""></div>
+                    <div class="slide"> <!<img src="" alt=""></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- END DOKUMENTASI -->
+
+    <!-- START LIVE SECTION -->
+    <div class="live-hero">
+        <div class="live flex items-center px-[70px] shrink-0">
+            <img src="assets/images/logo/kabinet-sinergis.png" alt="sinergis" />
+            <span class="text-white font-semibold italic text-[16px]">Sinergis</span>
+        </div>
+        <div class="live flex items-center px-[70px] shrink-0">
+            <img src="assets/images/logo/kabinet-sinergis.png" alt="sinergis" />
+            <span class="text-white font-semibold italic text-[16px]">Sinergis</span>
+        </div>
+        <div class="live flex items-center px-[70px] shrink-0">
+            <img src="assets/images/logo/kabinet-sinergis.png" alt="sinergis" />
+            <span class="text-white font-semibold italic text-[16px]">Sinergis</span>
+        </div>
+        <div class="live flex items-center px-[70px] shrink-0">
+            <img src="assets/images/logo/kabinet-sinergis.png" alt="sinergis" />
+            <span class="text-white font-semibold italic text-[16px]">Sinergis</span>
+        </div>
+        <div class="live flex items-center px-[70px] shrink-0">
+            <img src="assets/images/logo/kabinet-sinergis.png" alt="sinergis" />
+            <span class="text-white font-semibold italic text-[16px]">Sinergis</span>
+        </div>
+        <div class="live flex items-center px-[70px] shrink-0">
+            <img src="assets/images/logo/kabinet-sinergis.png" alt="sinergis" />
+            <span class="text-white font-semibold italic text-[16px]">Sinergis</span>
+        </div>
+    </div>
+    <!-- END LIVE SECTION -->
+
+    <!-- START FAQ SECTION -->
+    <section id="about" class="sm:px-16 lg:px-18 lg:py-70 bg-[#100521] relative transition-all duration-500">
+        <img src="assets/images/objects/blob-left.svg" alt="img" class="absolute top-10 left-0" />
+        <div class="font-jakarta text-center">
+            <h1 class="text-[64px] font-bold bg-linear-180/oklch from-blueLogo to-purpleTextLogo bg-clip-text text-transparent leading-20 glow-purple">Frequently Asked Question</h1>
+            <p class="text-xl text-white text-center mt-6">Masih bingung tentang HGTC?<br />Cek pertanyaan yang paling sering muncul berikut</p>
+        </div>
+        <div class="faq-grid w-full max-w-[1200px] mx-auto mt-10 grid grid-cols-2 gap-5">
+          <ul class="container-accordion left-column">
+            <li>
+              <input
+                type="checkbox"
+                name="accordion"
+                id="first"
+                class="accordion-toggle"
+              />
+              <label id="faq" for="first"
+                >Apa itu semantik<i class="fa-solid fa-circle-arrow-down"></i
+              ></label>
+              <div class="content">
+                <p>
+                  Semantik adalah seleksi mahasiswa nge top informatika yang
+                  dimana semantik ini merupakan wadah bagi mahasiswa
+                  informatika.
+                </p>
+              </div>
+            </li>
+            <li>
+              <input
+                type="checkbox"
+                name="accordion"
+                id="second"
+                class="accordion-toggle"
+              />
+              <label id="faq" for="second"
+                >Kapan pendaftaran nya?<i
+                  class="fa-solid fa-circle-arrow-down"
+                ></i
+              ></label>
+              <div class="content">
+                <p>
+                  Untuk waktu pendaftaran bisa di lihat di section timeline di
+                  atas.
+                </p>
+              </div>
+            </li>
+            <li>
+              <input
+                type="checkbox"
+                name="accordion"
+                id="third"
+                class="accordion-toggle"
+              />
+              <label id="faq" for="third"
+                >Apakah bisa mengikuti 2 lomba?<i
+                  class="fa-solid fa-circle-arrow-down"
+                ></i
+              ></label>
+              <div class="content">
+                <p>
+                  Bisa asalkan waktu perlombaannya tidak barengan atau bentrok.
+                </p>
+              </div>
+            </li>
+          </ul>
+          <ul class="container-accordion right-column">
+            <li>
+              <input
+                type="checkbox"
+                name="accordion"
+                id="fourth"
+                class="accordion-toggle"
+              />
+              <label id="faq" for="fourth"
+                >Ada berapa macam perlombaan?<i
+                  class="fa-solid fa-circle-arrow-down"
+                ></i
+              ></label>
+              <div class="content">
+                <p>
+                  Ada 5 yakni, idea project, graphich design, competitive programming, typing competition, dan video creative.
+                </p>
+              </div>
+            </li>
+            <li>
+              <input
+                type="checkbox"
+                name="accordion"
+                id="fifth"
+                class="accordion-toggle"
+              />
+              <label id="faq" for="fifth"
+                >Siapa yang bisa mengikuti lomba ini?<i
+                  class="fa-solid fa-circle-arrow-down"
+                ></i
+              ></label>
+              <div class="content">
+                <p>Mahasiswa aktif informatika.</p>
+              </div>
+            </li>
+            <li>
+              <input
+                type="checkbox"
+                name="accordion"
+                id="sixth"
+                class="accordion-toggle"
+              />
+              <label id="faq" for="sixth"
+                >Apakah ada biaya pendaftarannya?<i
+                  class="fa-solid fa-circle-arrow-down"
+                ></i
+              ></label>
+              <div class="content">
+                <p>Perlombaan ini tidak di pungut biaya apapun.</p>
+              </div>
+            </li>
+          </ul>
+        </div>
+        <img src="assets/images/objects/blob-right.svg" alt="img" class="absolute -bottom-8 right-0 z-1" />
+    </section>
+    <!-- END FAQ SECTION -->
+
+    <!-- JawaScript -->
+    <script src="assets/js/script.js"></script>
+</body>
+</html>
