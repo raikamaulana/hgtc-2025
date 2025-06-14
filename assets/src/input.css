@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Belanosima:wght@400;600;700&family=Handlee&family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Handlee&family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Oxanium:wght@200..800&family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap');
 @import "tailwindcss";
 
 @theme {
@@ -11,33 +11,20 @@
     --color-purpleHero: #592B9A;
     --color-darkPurpleAbout: #110621;
     --color-purpleAbout: #210B40;
+    --color-mainBrown: #F5EFE7;
+    --color-mainBlue: #376570;
     --font-jakarta: "Plus Jakarta Sans", sans-serif; 
     --font-handlee: "Handlee", sans-serif;
-    --font-belanosima: "Belanosima", sans-serif;
+    --font-noto: "Noto Sans", sans-serif;
 }
 
 * {
     scroll-behavior: smooth;
 }
 
-/* Scrollbar utama */
+/* Hilangkan scrollbar webkit */
 ::-webkit-scrollbar {
-  width: 8px;
-}
-
-/* Track (jalur background) */
-::-webkit-scrollbar-track {
-  background: #1e1e2f; 
-}
-
-/* Handle (bagian yang digeser) */
-::-webkit-scrollbar-thumb {
-  background: #8A5CCC;
-}
-
-/* Hover effect */
-::-webkit-scrollbar-thumb:hover {
-  background: #5F4586;
+  display: none;
 }
 
 /* Navbar CSS */
@@ -63,16 +50,21 @@
 }
 
 .navbar-fixed {
-    @apply fixed z-[999] bg-linear-90/oklch from-darkPurple/50 to-purple/50;
+    @apply fixed top-0 left-0 z-[99999] bg-linear-180/oklch from-white/95 to-mainBrown/20;
     backdrop-filter: blur(8px);
     box-shadow: inset 0 -1px 0 0 rgba(255, 255, 255, 0.2);
 }
 
 .navbar-absolute {
-    @apply bg-linear-90/oklch from-darkPurple to-purple;
     position: absolute;
     top: calc(var(--spacing) * 0);
     left: calc(var(--spacing) * 0);
+}
+
+.dropdown-blur {
+  @apply bg-linear-180/oklch from-white/95 to-mainBrown/20;
+  backdrop-filter: blur(8px);
+  box-shadow: inset 0 -1px 0 0 rgba(255, 255, 255, 0.2);
 }
 
 .shadow-purple-glow {
@@ -89,8 +81,8 @@
 }
 
 .inner-text {
-  text-shadow:
-   5px 1px 1px rgba(0, 0, 0, 0.3);
+  filter: drop-shadow(0px 4px 2px rgba(0, 0, 0, 0.50));
+    -webkit-filter: drop-shadow(0px 4px 2px rgba(0, 0, 0, 0.50));
 }
 
 .custom-shadow {
@@ -360,41 +352,17 @@
   }
 /* Button Get Started */
 
-/* live */
-.live-hero {
-    width: 100%;
-    height: 64px;
-    background-color: #1c1e32;
-    display: flex;
-    align-items: center;
-    overflow: hidden;
-    white-space: nowrap;
-}
-
-@keyframes tickerMove {
-    from {
-        transform: translateX(0);
-    }
-    to {
-        transform: translateX(-100%);
-    }
-}
-
-.live-hero .live {
-    animation: tickerMove 1.5s linear infinite;
-    -webkit-animation: tickerMove 1.5s linear infinite;
-}
-/* Live */
-
 /* About */
-.glow-purple {
-    filter: drop-shadow(0px 0px 25px rgba(138, 92, 204, 0.6));
-    -webkit-filter: drop-shadow(0px 0px 25px rgba(138, 92, 204, 0.6));
+.glow-brown {
+    filter: drop-shadow(0px 0px 25px rgba(255, 154, 44, 0.6));
+    -webkit-filter: drop-shadow(0px 0px 25px rgba(255, 154, 44, 0.6));
 }
-
-.glow-desc-div {
-    filter: drop-shadow(-15px -15px 20px rgba(95, 69, 134, 1));
-    -webkit-filter: drop-shadow(-15px -15px 20px rgba(95, 69, 134, 1));
+.glow-white {
+    filter: drop-shadow(0px 0px 25px rgba(255,255,255, 0.6));
+    -webkit-filter: drop-shadow(0px 0px 25px rgba(255, 255,255, 0.6));
+}
+.shadow-brown-glow-2 {
+    box-shadow: 0 0 120px 65px rgba(255, 154, 44, 0.7);
 }
 
 

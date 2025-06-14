@@ -51,69 +51,71 @@ document.addEventListener("DOMContentLoaded", function () {
   // Tampilkan slide pertama saat halaman dimuat
   showSlide(currentIndex);
 });
-// Paralax Effect
-let glowCloud = document.getElementById("glow-left-cloud");
-let leftCloud = document.getElementById("left-cloud");
-let rightCloud = document.getElementById("right-cloud");
-let leftStars = document.getElementById("left-stars");
-let rightStars = document.getElementById("right-stars");
-let heroText = document.querySelector("#landing-page h1");
-let currentScale = 1;
-let buttonGST = document.querySelector("#landing-page button");
-let brinBuilding = document.getElementById("brin-building");
 
-let leftStarsTop = leftStars.offsetTop;
-let leftStarsLeft = leftStars.offsetLeft;   
-let rightStarsTop = rightStars.offsetTop;
-const parentRightStars = rightStars.offsetParent;
-const offsetRight = parentRightStars.offsetWidth - (rightStars.offsetLeft + rightStars.offsetWidth);
-let rightCloudTop = rightCloud.offsetTop;
-let leftCloudTop = leftCloud.offsetTop;
-let glowLeftCloud = glowCloud.offsetTop;
-
-window.addEventListener('scroll', function(){
-    let value = window.scrollY;
-     // Skala mengecil dari 1 ke 0.8, misalnya
-    let targetScale = Math.max(1 - value * 0.001, 0.7);
-     // Interpolasi lambat ke target scale (semacam easing)
-    currentScale += (targetScale - currentScale) * 0.1;
-    let opacity = Math.max(1 - value / 50, 0); // hilang sepenuhnya setelah scroll 300px
-    // contoh batas maksimum pergeseran top heroText = 200px
-    let maxShift = 500;
-    // Hitung posisi top heroText dengan batas
-    let newTopHeroText = Math.min(value * 0.7, maxShift);
-    let newTopLeftStars = Math.min(leftStarsTop + value * 0.7, maxShift);
-    let newTopRightStars = Math.min(rightStarsTop + value * 0.7, maxShift);
-
-    // leftStars.style.top = leftStarsTop + value * 0.9 + 'px';
-    leftStars.style.top = newTopLeftStars + 'px';
-    leftStars.style.left = leftStarsLeft + value * 0.2 + 'px';
-    rightStars.style.top = newTopRightStars + value * 0.5 + 'px';
-    rightStars.style.right = offsetRight + value * 0.5 + 'px';
-    // heroText.style.top = value * 0.7 + 'px';
-    heroText.style.top = newTopHeroText + 'px';
-    heroText.style.transform = `scale(${currentScale})`;
-    rightCloud.style.top = rightCloudTop + value * 0.2 + 'px';
-    leftCloud.style.top = leftCloudTop + value * 0.2 + 'px';
-    glowCloud.style.top = glowLeftCloud + value * 0.2 + 'px';
-    buttonGST.style.opacity = opacity;
-    buttonGST.style.top = -value * 1 + 'px';
-})
-// Paralax Effect
+// Mencegah Inspect Element dan View Source
+document.addEventListener("keydown", function (event) {
+    if (
+        (event.ctrlKey &&
+        (event.key === "u" ||
+            event.key === "i" ||
+            event.key === "j" ||
+            event.key === "s")) ||
+        (event.ctrlKey &&
+        event.shiftKey &&
+        (event.key === "I" || event.key === "J" || event.key === "C")) ||
+        event.key === "F12"
+    ) {
+        event.preventDefault();
+        console.log("Inspect Element telah dinonaktifkan!"); // Debugging
+    }
+});
+// Mencegah Klik Kanan
+document.addEventListener("contextmenu", function (event) {
+    event.preventDefault();
+});
+// Mencegah Drag & Drop pada Semua Gambar
+document.addEventListener("dragstart", function (event) {
+    event.preventDefault();
+});
+// Mencegah Klik Kanan pada Gambar Secara Spesifik
+document.querySelectorAll("img").forEach((img) => {
+    img.addEventListener("contextmenu", (event) => event.preventDefault());
+});
 
 // Navbar Fixed
 window.onscroll = function() {
     const header = document.querySelector('#navbar');
     const fixedNav = header.offsetTop;
-    console.log(fixedNav);
+    const toTop = document.querySelector('#to-top');
+    const scrollY = window.pageYOffset;
 
-    if (window.pageYOffset > fixedNav) {
-        header.classList.add('navbar-fixed');
-        header.classList.remove('navbar-absolute');
+    if (scrollY <= 200) {
+      // TAMPILKAN navbar absolute
+      header.classList.remove('navbar-fixed');
+      header.classList.add('navbar-absolute');
+      header.style.transform = "translateY(0)";
+      header.style.opacity = "1";
+
+      toTop.classList.remove('flex');
+      toTop.classList.add('hidden');
+    } 
+    else if (scrollY > 200 && scrollY <= 350) {
+      // SEMBUNYIKAN NAVBAR
+      header.style.transform = "translateY(-10px)";
+      header.style.opacity = "0";
+
+      toTop.classList.remove('flex');
+      toTop.classList.add('hidden');
     } 
     else {
-        header.classList.remove('navbar-fixed');
-        header.classList.add('navbar-absolute');
+      // TAMPILKAN navbar fixed
+      header.classList.add('navbar-fixed');
+      header.classList.remove('navbar-absolute');
+      header.style.transform = "translateY(0)";
+      header.style.opacity = "1";
+
+      toTop.classList.remove('hidden');
+      toTop.classList.add('flex');
     }
 }
 
@@ -145,19 +147,6 @@ document.addEventListener("DOMContentLoaded", function () {
         aboutSection.scrollIntoView({ behavior: "smooth" });
     });
 });
-
-// LIVE HERO SECTION
-document.addEventListener("DOMContentLoaded", function () {
-  const liveHero = document.querySelector(".live-hero");
-  const items = Array.from(document.querySelectorAll(".live-hero .live"));
-
-  // Duplikasi elemen agar animasi berjalan tanpa jeda
-  items.forEach((item) => {
-    const clone = item.cloneNode(true);
-    liveHero.appendChild(clone);
-  });
-});
-// LIVE HERO SECTION
 
 // NUMBER COUNTING ANIMATION
 const semuaAngka = document.querySelectorAll("#card span");
